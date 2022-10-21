@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../config.dart';
+import '../config.dart';
 
 class Line extends StatelessWidget {
   const Line({super.key});

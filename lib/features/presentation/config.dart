@@ -9,6 +9,7 @@ class ColorConfig {
   static HexColor violet = HexColor('#382A81');
   static HexColor mySwitch = HexColor('#EBECF1');
   static HexColor textPrompt = HexColor('#99A2AD');
+  static HexColor textPromptRegistration = HexColor('#3C4FFF');
 
 
 }

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import 'features/presentation/catalog/catalog.dart';
+import 'features/presentation/home/home.dart';
 import 'features/presentation/login/login.dart';
+import 'features/presentation/registration/registration.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,10 +31,14 @@ class MyApp extends StatelessWidget {
         path: '/',
         builder: (BuildContext context, GoRouterState state) => Login() ,
       ),
-      // GoRoute(
-      //   path: '/home',
-      //   builder: (BuildContext context, GoRouterState state) => const Home(),
-      // ),
+      GoRoute(
+        path: '/registration',
+        builder: (BuildContext context, GoRouterState state) => Registration(),
+      ),
+      GoRoute(
+        path: '/home',
+        builder: (BuildContext context, GoRouterState state) => Home(),
+      ),
     ],
   );
 }

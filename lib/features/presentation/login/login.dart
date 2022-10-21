@@ -1,10 +1,11 @@
 import 'package:brand_house/features/presentation/config.dart';
-import 'package:brand_house/features/presentation/login/widgets/lolgin_switch.dart';
-import 'package:brand_house/features/presentation/login/widgets/form.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:brand_house/features/presentation/widgets/button.dart';
+import 'package:brand_house/features/presentation/widgets/switch.dart';
+import 'package:brand_house/features/presentation/widgets/form.dart';
+import 'package:brand_house/features/presentation/widgets/header.dart';
 import 'package:flutter/material.dart';
 
-import 'widgets/login_line.dart';
+import '../widgets/line.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -14,6 +15,7 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   final TextEditingController _passwordEditingController = TextEditingController();
   final TextEditingController _loginEditingController = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
 
   late bool _passwordVisible;
   @override
@@ -28,24 +30,11 @@ class _LoginState extends State<Login> {
         color: Colors.white,
         child: Column(
           children: [
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 24.3, vertical: 50),
-              child:  Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconButton(onPressed: () {}, icon: Icon(Icons.keyboard_arrow_left, size: 34, color: ColorConfig.iconLogin,)),
-                  Text('Вход', style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500, color: ColorConfig.textBlack),),
-                  const SizedBox(
-                    width: 46,
-                  )
-                ],
-              ),
-            ),
+            const HeaderLogin(header: 'Вход',),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 16),
               child:  Form(
-                // key: _formKey,
+                key: _formKey,
                   child:  Container(
                     color: Colors.white,
                     child: Column(
@@ -87,18 +76,7 @@ class _LoginState extends State<Login> {
                               )
                           ),
                         ),
-                        Container(
-                          margin: const EdgeInsets.only(top: 32),
-                          height: 56,
-                          child: const Align(
-                            alignment: Alignment.center,
-                            child: Text('Вход', style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),),
-                          ),
-                          decoration: BoxDecoration(
-                            color: ColorConfig.violet,
-                            borderRadius: BorderRadius.circular(32)
-                          ),
-                        ),
+                        LoginButton(background: ColorConfig.violet, border: ColorConfig.violet, marginTop: 32, text: 'Вход', textColor: Colors.white, navigation: 'home',),
                         Row(
                           children: [
                             const SizedBox(
@@ -132,21 +110,7 @@ class _LoginState extends State<Login> {
                             ],
                           ),
                         ),
-                        Container(
-                          margin: EdgeInsets.only(top: 28),
-                          child: Container(
-                            margin: const EdgeInsets.only(top: 32),
-                            height: 56,
-                            decoration: BoxDecoration(
-                                border: Border.all(color: ColorConfig.violet),
-                                borderRadius: BorderRadius.circular(32)
-                            ),
-                            child: Align(
-                              alignment: Alignment.center,
-                              child: Text('Регистрация', style: TextStyle(color: ColorConfig.violet, fontSize: 16, fontWeight: FontWeight.w600),),
-                            ),
-                          ),
-                        )
+                        LoginButton(background: Colors.white, border: ColorConfig.violet, marginTop: 32, text: 'Регистрация', textColor: ColorConfig.violet, navigation: 'registration',),
                       ],
                     ),
                   )
