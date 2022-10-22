@@ -10,6 +10,9 @@ class ColorConfig {
   static HexColor mySwitch = HexColor('#EBECF1');
   static HexColor textPrompt = HexColor('#99A2AD');
   static HexColor textPromptRegistration = HexColor('#3C4FFF');
+  static HexColor green = HexColor('#4AC959');
+  static HexColor yellow = HexColor('#FDD835');
+
 
 
 }

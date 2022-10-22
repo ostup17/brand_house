@@ -1,3 +1,5 @@
+import 'package:brand_house/features/presentation/config.dart';
+import 'package:brand_house/features/presentation/widgets/products_description.dart';
 import 'package:flutter/material.dart';
 
 class Products extends StatelessWidget {
@@ -5,16 +7,17 @@ class Products extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-          mainAxisExtent: 290,
+          mainAxisExtent: 322,
           // Максимальная горизонтальная ширина одного дочернего виджета
-          maxCrossAxisExtent: 200,
+          maxCrossAxisExtent: 180,
           // Горизонтальный интервал между отдельными суб-виджетами
           mainAxisSpacing: 8.0,
           // Вертикальный интервал между отдельными суб-виджетами
-          crossAxisSpacing: 20.0
+          crossAxisSpacing: 10.0
       ),
       shrinkWrap: true,
       itemCount: 12,
+      physics: NeverScrollableScrollPhysics(),
       itemBuilder: (BuildContext context, int index) {
         return Container(
             margin: EdgeInsets.only(top: 28),
@@ -26,9 +29,11 @@ class Products extends StatelessWidget {
                       borderRadius: BorderRadius.circular(18.0),
                       child: SizedBox.fromSize(
                         size: Size.fromRadius(90),
-                        child: Image.network('https://image.shutterstock.com/image-photo/black-white-boots-fashion-shoes-260nw-1851740584.jpg', fit: BoxFit.cover,),
+                        child: Image.network('https://cdn.media.amplience.net/i/office/4587600078_ls.jpg?\$newpicture\$&fmt=auto&qlt=default', fit: BoxFit.cover,),
                       )
                   ),
+                  ProductsDescription(marginBottom: 5, iconSize: 22, boolFlag: true,)
+
                 ],
               ),
             )
