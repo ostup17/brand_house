@@ -3,6 +3,8 @@ import 'package:brand_house/features/presentation/widgets/products_description.d
 import 'package:flutter/material.dart';
 
 class Products extends StatelessWidget {
+  const Products({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
@@ -17,10 +19,10 @@ class Products extends StatelessWidget {
       ),
       shrinkWrap: true,
       itemCount: 12,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (BuildContext context, int index) {
         return Container(
-            margin: EdgeInsets.only(top: 28),
+            margin: const EdgeInsets.only(top: 28),
             child: InkWell(
               onTap: () {},
               child: Column(
@@ -28,7 +30,7 @@ class Products extends StatelessWidget {
                   ClipRRect(
                       borderRadius: BorderRadius.circular(18.0),
                       child: SizedBox.fromSize(
-                        size: Size.fromRadius(90),
+                        size: const Size.fromRadius(90),
                         child: Image.network('https://cdn.media.amplience.net/i/office/4587600078_ls.jpg?\$newpicture\$&fmt=auto&qlt=default', fit: BoxFit.cover,),
                       )
                   ),

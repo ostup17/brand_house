@@ -1,5 +1,6 @@
 import 'package:brand_house/features/presentation/basket/basket.dart';
 import 'package:brand_house/features/presentation/catalog/wrapper.dart';
+import 'package:brand_house/features/presentation/favorite/favorite.dart';
 import 'package:brand_house/features/presentation/home/widgets/app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +33,7 @@ class _HomeBodyState extends State<HomeBody> {
     Main(),
     CatalogWrapper(),
     Basket(),
-    CatalogWrapper(),
+    Favorite(),
     CatalogWrapper(),
   ];
 

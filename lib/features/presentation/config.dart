@@ -15,6 +15,8 @@ class ColorConfig {
   static HexColor black = HexColor('#323232');
   static HexColor greyBg = HexColor('#F5F7FB');
   static HexColor borderBasket = HexColor('#A1A7AF');
+  static HexColor pink = HexColor('#D81B60');
+  static HexColor red = HexColor('#D81B60');
 
 
 }

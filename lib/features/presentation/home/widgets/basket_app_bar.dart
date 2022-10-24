@@ -3,8 +3,9 @@ import 'package:go_router/go_router.dart';
 
 import '../../config.dart';
 
-class AppBarWidgetBasket extends StatelessWidget {
-  const AppBarWidgetBasket({Key? key}) : super(key: key);
+class CatalogPlusAppBar extends StatelessWidget {
+  final String header;
+  const CatalogPlusAppBar({required this.header});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class AppBarWidgetBasket extends StatelessWidget {
         alignment: Alignment.center,
         child: Container(
           margin: EdgeInsets.only(right: 55),
-          child:  Text('Корзина', style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500, color: ColorConfig.textBlack),),
+          child:  Text(header, style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500, color: ColorConfig.textBlack),),
           )
       )
     );

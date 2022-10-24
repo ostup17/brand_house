@@ -4,6 +4,8 @@ import '../home/widgets/app_bar.dart';
 import 'catalog.dart';
 
 class CatalogWrapper extends StatelessWidget {
+  const CatalogWrapper({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,7 +16,7 @@ class CatalogWrapper extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                 children: [
-                  Catalog(),
+                  const Catalog(),
                   Container(
                       margin: const EdgeInsets.fromLTRB(16, 18, 16, 0),
                       child: const Align(
@@ -22,7 +24,7 @@ class CatalogWrapper extends StatelessWidget {
                         child: Text('Возможно вам понравится', style: TextStyle(fontSize: 19, fontWeight: FontWeight.w500),),
                       )
                   ),
-                  Products()
+                  const Products()
                 ],
               ),
             )

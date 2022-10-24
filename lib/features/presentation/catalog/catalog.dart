@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class Catalog extends StatefulWidget {
+  const Catalog({super.key});
+
   @override
   _CatalogState createState() => _CatalogState();
 }

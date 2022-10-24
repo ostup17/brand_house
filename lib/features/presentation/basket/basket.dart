@@ -5,16 +5,16 @@ import 'package:flutter/material.dart';
 import '../config.dart';
 
 class Basket extends StatelessWidget {
+  const Basket({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: const PreferredSize(preferredSize: Size.fromHeight(60), child: AppBarWidgetBasket()),
+        appBar: const PreferredSize(preferredSize: Size.fromHeight(60), child: CatalogPlusAppBar(header: 'Корзина',)),
         body: Container(
+          margin: EdgeInsets.only(top: 16),
         child: Column(
           children: [
-            SizedBox(
-              height: 16,
-            ),
             Expanded(
               child: ListView.separated(
                 itemCount: 8,
@@ -95,9 +95,9 @@ class Basket extends StatelessWidget {
                               Align(
                                 child: IconButton(
                                   onPressed: () {},
-                                  padding: const EdgeInsets.only(right: 12.0, left: 12.0),
-                                  constraints: const BoxConstraints(),
-                                  icon: const Icon(Icons.delete_forever_rounded),
+                                  // padding: const EdgeInsets.only(right: 12.0, left: 12.0),
+                                  // constraints: const BoxConstraints(),
+                                  icon: Icon(Icons.delete_forever_rounded, color: ColorConfig.iconInput, size: 33,),
                                 ),
                               ),
                             ],
