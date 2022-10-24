@@ -5,12 +5,14 @@ import '../config.dart';
 
 class HeaderLogin extends StatelessWidget {
   final String header;
-  const HeaderLogin({super.key, required this.header});
+  final double marginTop;
+  final double marginBottom;
+  const HeaderLogin({super.key, required this.header, required this.marginTop, required this.marginBottom});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 24.3, vertical: 50),
+      margin: EdgeInsets.fromLTRB(24.3, marginTop, 24.3, marginBottom),
       child:  Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

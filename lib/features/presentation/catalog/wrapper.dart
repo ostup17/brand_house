@@ -1,11 +1,13 @@
 import 'package:brand_house/features/presentation/catalog/products.dart';
 import 'package:flutter/material.dart';
+import '../home/widgets/app_bar.dart';
 import 'catalog.dart';
 
-class Wrapper extends StatelessWidget {
+class CatalogWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: const PreferredSize(preferredSize: Size.fromHeight(60), child: AppBarWidget()),
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
             child: Container(

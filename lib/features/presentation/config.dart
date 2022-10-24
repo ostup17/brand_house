@@ -12,7 +12,9 @@ class ColorConfig {
   static HexColor textPromptRegistration = HexColor('#3C4FFF');
   static HexColor green = HexColor('#4AC959');
   static HexColor yellow = HexColor('#FDD835');
-
+  static HexColor black = HexColor('#323232');
+  static HexColor greyBg = HexColor('#F5F7FB');
+  static HexColor borderBasket = HexColor('#A1A7AF');
 
 
 }

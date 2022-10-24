@@ -24,7 +24,7 @@ class _RegistrationState extends State<Registration> {
           margin: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
-              const HeaderLogin(header: 'Регистрация',),
+              const HeaderLogin(header: 'Регистрация',marginBottom: 50, marginTop: 50,),
               FormInputs(controller: _loginEditingController, hintText: 'Телефон'),
               LoginButton(background: ColorConfig.violet, border: ColorConfig.violet, marginTop: 32, text: 'Зарегистрироваться', textColor: Colors.white, navigation: 'test',),
               Row(

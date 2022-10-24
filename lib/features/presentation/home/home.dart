@@ -1,3 +1,4 @@
+import 'package:brand_house/features/presentation/basket/basket.dart';
 import 'package:brand_house/features/presentation/catalog/wrapper.dart';
 import 'package:brand_house/features/presentation/home/widgets/app_bar.dart';
 import 'package:flutter/material.dart';
@@ -29,10 +30,10 @@ class _HomeBodyState extends State<HomeBody> {
   int _currentIndex = 0;
   static final List<Widget> _widgets = <Widget> [
     Main(),
-    Wrapper(),
-    Wrapper(),
-    Wrapper(),
-    Wrapper(),
+    CatalogWrapper(),
+    Basket(),
+    CatalogWrapper(),
+    CatalogWrapper(),
   ];
 
   void _onItemTapped(int index) {
@@ -43,7 +44,7 @@ class _HomeBodyState extends State<HomeBody> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const PreferredSize(preferredSize: Size.fromHeight(60), child: AppBarWidget()),
+      // appBar: const PreferredSize(preferredSize: Size.fromHeight(60), child: AppBarWidget()),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,

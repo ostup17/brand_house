@@ -30,7 +30,7 @@ class _LoginState extends State<Login> {
         color: Colors.white,
         child: Column(
           children: [
-            const HeaderLogin(header: 'Вход',),
+            const HeaderLogin(header: 'Вход', marginBottom: 50, marginTop: 50,),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 16),
               child:  Form(
