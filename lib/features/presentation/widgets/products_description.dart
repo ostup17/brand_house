@@ -50,7 +50,7 @@ class ProductsDescription extends StatelessWidget {
                 constraints: BoxConstraints(),
                 onPressed: () {},
                 icon: Icon(Icons.add, color: ColorConfig.violet, size: iconSize,),
-              ) : SizedBox(width: 0,),
+              ) : const SizedBox(width: 0,),
               Text('В корзину', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: ColorConfig.violet),),
               const SizedBox(width: 31,),
               InkWell(

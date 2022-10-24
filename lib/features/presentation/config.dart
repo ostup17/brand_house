@@ -17,6 +17,4 @@ class ColorConfig {
   static HexColor borderBasket = HexColor('#A1A7AF');
   static HexColor pink = HexColor('#D81B60');
   static HexColor red = HexColor('#D81B60');
-
-
 }

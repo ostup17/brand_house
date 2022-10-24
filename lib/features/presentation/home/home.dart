@@ -31,10 +31,10 @@ class _HomeBodyState extends State<HomeBody> {
   int _currentIndex = 0;
   static final List<Widget> _widgets = <Widget> [
     Main(),
-    CatalogWrapper(),
-    Basket(),
-    Favorite(),
-    CatalogWrapper(),
+    const CatalogWrapper(),
+    const Basket(),
+    const Favorite(),
+    const CatalogWrapper(),
   ];
 
   void _onItemTapped(int index) {
@@ -43,6 +43,7 @@ class _HomeBodyState extends State<HomeBody> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: const PreferredSize(preferredSize: Size.fromHeight(60), child: AppBarWidget()),
@@ -58,27 +59,27 @@ class _HomeBodyState extends State<HomeBody> {
         items: [
           BottomNavigationBarItem(
               label: 'Главная',
-              icon: Icon(Icons.home_outlined),
+              icon: const Icon(Icons.home_outlined),
               activeIcon: Icon(Icons.home_outlined, color: ColorConfig.violet,)
           ),
           BottomNavigationBarItem(
               label: 'Каталог',
-              icon: Icon(Icons.widgets_outlined),
+              icon: const Icon(Icons.widgets_outlined),
               activeIcon: Icon(Icons.widgets_outlined, color: ColorConfig.violet,),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
+            icon: const Icon(Icons.shopping_cart),
             activeIcon: Icon(Icons.shopping_cart, color: ColorConfig.violet,),
             label: 'Корзина',
           ),
           BottomNavigationBarItem(
               label: 'Избранное',
-              icon: Icon(Icons.favorite_border),
+              icon: const Icon(Icons.favorite_border),
               activeIcon: Icon(Icons.favorite_border, color: ColorConfig.violet,)
           ),
           BottomNavigationBarItem(
               label: 'Профиль',
-              icon: Icon(Icons.person),
+              icon: const Icon(Icons.person),
               activeIcon: Icon(Icons.person, color: ColorConfig.violet,)
           ),
         ],

@@ -7,6 +7,8 @@ import '../home/widgets/app_bar.dart';
 
 
 class Main extends StatefulWidget {
+  const Main({super.key});
+
   @override
   _MainState createState() => _MainState();
 }
@@ -53,7 +55,7 @@ CarouselController buttonCarouselController = CarouselController();
                 )
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(0, 36, 16, 20),
+              margin: const EdgeInsets.fromLTRB(0, 36, 16, 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -62,7 +64,7 @@ CarouselController buttonCarouselController = CarouselController();
                   ],
                 )
             ),
-            SizedBox(
+            const SizedBox(
               height: 35,
             ),
             Expanded(
@@ -90,20 +92,20 @@ CarouselController buttonCarouselController = CarouselController();
                                     borderRadius: BorderRadius.circular(16),
                                     color: Colors.white,
                                   ),
-                                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                                  child: Text('18:29:13', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),),
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                  child: const Text('18:29:13', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),),
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(16),
                                     color: ColorConfig.yellow,
                                   ),
-                                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                                  child: Text('- 29%  ', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),),
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                  child: const Text('- 29%  ', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),),
                                 ),
                               ],
                             ),
-                            Container(
+                            SizedBox(
                               height: 124,
                               child: Image.network('https://cdn.sanity.io/images/c1chvb1i/production/5e762aae11d46e18bd20b095691853579c4e613e-1100x735.jpg', fit: BoxFit.fill,),
                             ),

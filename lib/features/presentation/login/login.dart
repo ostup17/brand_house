@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import '../widgets/line.dart';
 
 class Login extends StatefulWidget {
+  const Login({super.key});
+
   @override
   _LoginState createState() => _LoginState();
 }
@@ -20,6 +22,7 @@ class _LoginState extends State<Login> {
   late bool _passwordVisible;
   @override
   void initState() {
+    super.initState();
     _passwordVisible = false;
   }
 
@@ -32,7 +35,7 @@ class _LoginState extends State<Login> {
           children: [
             const HeaderLogin(header: 'Вход', marginBottom: 50, marginTop: 50,),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 16),
+              margin: const EdgeInsets.symmetric(horizontal: 16),
               child:  Form(
                 key: _formKey,
                   child:  Container(
@@ -41,40 +44,37 @@ class _LoginState extends State<Login> {
                       children: [
                         FormInputs(controller: _loginEditingController, hintText: ('Телефон')),
                         const SizedBox(height: 40,),
-                        Container(
-                          // margin: const EdgeInsets.only(right: 16),
-                          child: TextFormField(
-                              controller: _passwordEditingController,
-                              obscureText: !_passwordVisible,
-                              enableSuggestions: false,
-                              autocorrect: false,
-                              decoration: InputDecoration(
-                                  filled: true,
-                                  fillColor: ColorConfig.bgInput,
-                                  enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(color: ColorConfig.borderInput)
+                        TextFormField(
+                            controller: _passwordEditingController,
+                            obscureText: !_passwordVisible,
+                            enableSuggestions: false,
+                            autocorrect: false,
+                            decoration: InputDecoration(
+                                filled: true,
+                                fillColor: ColorConfig.bgInput,
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(color: ColorConfig.borderInput)
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(color: ColorConfig.borderInput)
+                                ),
+                                border: InputBorder.none,
+                                hintStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: ColorConfig.textBlack,),
+                                hintText: 'Введите ваш пароль',
+                                suffixIcon: IconButton(
+                                  icon: Icon(
+                                    _passwordVisible
+                                        ? Icons.visibility
+                                        : Icons.visibility_off,
+                                    color: ColorConfig.iconInput,
                                   ),
-                                  focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(color: ColorConfig.borderInput)
-                                  ),
-                                  border: InputBorder.none,
-                                  hintStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: ColorConfig.textBlack,),
-                                  hintText: 'Введите ваш пароль',
-                                  suffixIcon: IconButton(
-                                    icon: Icon(
-                                      _passwordVisible
-                                          ? Icons.visibility
-                                          : Icons.visibility_off,
-                                      color: ColorConfig.iconInput,
-                                    ),
-                                    onPressed: () {
-                                      setState(() {
-                                        _passwordVisible = !_passwordVisible;
-                                      });
-                                    },
-                                  )
-                              )
-                          ),
+                                  onPressed: () {
+                                    setState(() {
+                                      _passwordVisible = !_passwordVisible;
+                                    });
+                                  },
+                                )
+                            )
                         ),
                         LoginButton(background: ColorConfig.violet, border: ColorConfig.violet, marginTop: 32, text: 'Вход', textColor: Colors.white, navigation: 'home',),
                         Row(

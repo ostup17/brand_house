@@ -12,23 +12,20 @@ class FormInputs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // margin: const EdgeInsets.only(right: 16),
-      child: TextFormField(
-        controller: controller,
-        decoration: InputDecoration(
-          filled: true,
-          fillColor: ColorConfig.bgInput,
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: ColorConfig.borderInput)
-          ),
-            focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: ColorConfig.borderInput)
-            ),
-            border: InputBorder.none,
-            hintText: hintText,
-            hintStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: ColorConfig.textBlack,)
+    return TextFormField(
+      controller: controller,
+      decoration: InputDecoration(
+        filled: true,
+        fillColor: ColorConfig.bgInput,
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: ColorConfig.borderInput)
         ),
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: ColorConfig.borderInput)
+          ),
+          border: InputBorder.none,
+          hintText: hintText,
+          hintStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: ColorConfig.textBlack,)
       ),
     );
   }

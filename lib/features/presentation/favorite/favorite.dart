@@ -92,8 +92,8 @@ class Favorite extends StatelessWidget {
                                               borderRadius: BorderRadius.circular(32),
                                               color: ColorConfig.violet
                                           ),
+                                          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                                           child: const Text('В корзину', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.white),),
-                                          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                                         )
                                       )
                                     ],

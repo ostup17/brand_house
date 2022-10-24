@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
     routes: <GoRoute>[
       GoRoute(
         path: '/',
-        builder: (BuildContext context, GoRouterState state) => Login() ,
+        builder: (BuildContext context, GoRouterState state) => const Login() ,
       ),
       GoRoute(
         path: '/registration',
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       ),
       GoRoute(
         path: '/home',
-        builder: (BuildContext context, GoRouterState state) => Home(),
+        builder: (BuildContext context, GoRouterState state) => const Home(),
       ),
     ],
   );
